@@ -1,0 +1,42 @@
+@import "_mixins.scss";
+@import "_vars.scss";
+@import "_reset.scss";
+@import "_nav.scss";
+
+.big-title {
+  font-family: "Abril Fatface";
+}
+
+.wrapper {
+  background-color: rgb(255, 255, 255);
+  width: $wrapper-width;
+  height: $wrapper-height;
+  position: relative;
+  display: flex;
+  .fat-content {
+    flex: 1;
+  }
+}
+
+/** Top-bar start **/
+.top-bar {
+  position: absolute;
+  width: calc(100% - 50px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 30px;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 30px;
+  .search-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .logo-icon {
+    height: 35px;
+    width: 60px;
+    cursor: pointer;
+  }
+}

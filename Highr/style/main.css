@@ -1,0 +1,170 @@
+body, .region-nav, .region-nav li, .region-nav li p, .social-nav .social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+.nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-left: 2px solid #f1f1f1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 50px;
+}
+
+.region-nav {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 30%;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+}
+
+.region-nav li {
+  padding: 0 20px;
+  font-family: monospace;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  height: 100%;
+  position: relative;
+  color: #bfbfbf;
+}
+
+.region-nav li:not(:first-child):after {
+  content: "";
+  position: absolute;
+  background: #d5d5d5;
+  width: 2px;
+  height: 30%;
+  top: 35%;
+  left: 0;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+.region-nav li p {
+  position: relative;
+  height: 100%;
+}
+
+.region-nav li p:before {
+  content: "";
+  position: absolute;
+  background: black;
+  width: 100%;
+  height: 3px;
+  bottom: -1px;
+  left: 0;
+  -webkit-transition: 0.3s linear transform;
+  transition: 0.3s linear transform;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.region-nav li.active p:before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.social-nav {
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.social-nav .social-link {
+  width: 100%;
+  height: 33px;
+  cursor: pointer;
+}
+
+.social-nav .social-link svg {
+  width: 15px;
+  height: 15px;
+  fill: #bfbfbf;
+}
+
+.big-title {
+  font-family: "Abril Fatface";
+}
+
+.wrapper {
+  background-color: white;
+  width: 960px;
+  height: 640px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .fat-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/** Top-bar start **/
+.top-bar {
+  position: absolute;
+  width: calc(100% - 50px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 30px;
+  left: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 30px;
+}
+
+.top-bar .search-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.top-bar .logo-icon {
+  height: 35px;
+  width: 60px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */
