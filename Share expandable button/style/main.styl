@@ -1,0 +1,130 @@
+/*
+  INSPIRED BY:
+  https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog
+*/
+*
+  margin 0
+  padding 0
+  font-family sans-serif
+  list-style none
+  
+bg = #ecf0f1
+iH = 50px
+iW = 50px
+transDur = .3s
+fb = #3b5999
+linkedin = #0077B5
+gplus = #dd4b39
+vimeo = #e4405f
+twitter = #55acee
+
+flexCenter()
+  display flex
+  align-items center
+  justify-content center
+
+.thing-wrapper
+  position relative
+  flexCenter()
+  
+.wrapper
+  width 100vw
+  height 100vh
+  background-color bg
+  flexCenter()
+  
+.share-btn
+  position relative
+  height iH 
+  width iW
+  background-color #e74c3c
+  border-radius 50%
+  cursor pointer
+  z-index 2
+  flexCenter()
+  transition .3s linear all
+  &.active
+    transform translateY(25px)
+    & .icon-plus
+      transform rotate(135deg)
+    & ~ .expand-box
+      width 250px
+      height 300px
+      border-radius 5px
+      ul
+        transition transDur transDur linear opacity, transDur transDur linear transform
+        opacity 1
+        transform scale(1)
+  .icon-plus
+    fill white
+    height 20px
+    transition transDur linear all
+    width 20px
+    
+.expand-box
+  position absolute
+  width iW
+  height iH
+  background-color #fff
+  bottom 0
+  border-radius 50%
+  transition transDur linear all
+  ul 
+    opacity 0
+    transform scale(.9)
+    transform-origin center
+    li 
+      display flex
+      padding 10px
+      align-items center
+      cursor pointer
+      transition .2s linear all
+      &:hover
+        transform scale(1.2)
+        h2 
+          color #fff
+      &:not(:last-child)
+        border-bottom 1px solid #dadada 
+      h2
+        font-size 15px
+        margin-left 10px
+        font-weight 100
+        color #292929
+      svg
+        width 30px
+        height 30px
+        padding: 5px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        fill #fff
+        &.icon-fb
+          background-color fb
+        &.icon-gplus
+          background-color gplus
+        &.icon-vimeo
+          background-color vimeo
+        &.icon-linkedin
+          background-color linkedin
+        &.icon-twitter
+          background-color twitter
+    
+  
+.fb
+  &:hover
+    background-color fb
+  
+.gplus
+  &:hover
+    background-color gplus
+
+.vimeo 
+  &:hover
+    background-color vimeo
+  
+.linkedin
+  &:hover
+    background-color linkedin
+    
+.twitter
+  &:hover
+    background-color twitter

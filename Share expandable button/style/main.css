@@ -1,0 +1,133 @@
+/*
+  INSPIRED BY:
+  https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  list-style: none;
+}
+.thing-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.share-btn {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s linear all;
+}
+.share-btn.active {
+  transform: translateY(25px);
+}
+.share-btn.active .icon-plus {
+  transform: rotate(135deg);
+}
+.share-btn.active ~ .expand-box {
+  width: 250px;
+  height: 300px;
+  border-radius: 5px;
+}
+.share-btn.active ~ .expand-box ul {
+  transition: 0.3s 0.3s linear opacity, 0.3s 0.3s linear transform;
+  opacity: 1;
+  transform: scale(1);
+}
+.share-btn .icon-plus {
+  fill: #fff;
+  height: 20px;
+  transition: 0.3s linear all;
+  width: 20px;
+}
+.expand-box {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  bottom: 0;
+  border-radius: 50%;
+  transition: 0.3s linear all;
+}
+.expand-box ul {
+  opacity: 0;
+  transform: scale(0.9);
+  transform-origin: center;
+}
+.expand-box ul li {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s linear all;
+}
+.expand-box ul li:hover {
+  transform: scale(1.2);
+}
+.expand-box ul li:hover h2 {
+  color: #fff;
+}
+.expand-box ul li:not(:last-child) {
+  border-bottom: 1px solid #dadada;
+}
+.expand-box ul li h2 {
+  font-size: 15px;
+  margin-left: 10px;
+  font-weight: 100;
+  color: #292929;
+}
+.expand-box ul li svg {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  fill: #fff;
+}
+.expand-box ul li svg.icon-fb {
+  background-color: #3b5999;
+}
+.expand-box ul li svg.icon-gplus {
+  background-color: #dd4b39;
+}
+.expand-box ul li svg.icon-vimeo {
+  background-color: #e4405f;
+}
+.expand-box ul li svg.icon-linkedin {
+  background-color: #0077b5;
+}
+.expand-box ul li svg.icon-twitter {
+  background-color: #55acee;
+}
+.fb:hover {
+  background-color: #3b5999;
+}
+.gplus:hover {
+  background-color: #dd4b39;
+}
+.vimeo:hover {
+  background-color: #e4405f;
+}
+.linkedin:hover {
+  background-color: #0077b5;
+}
+.twitter:hover {
+  background-color: #55acee;
+}
