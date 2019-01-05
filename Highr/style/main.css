@@ -1,4 +1,4 @@
-body, .region-nav, .region-nav li, .region-nav li p, .social-nav .social-link {
+body, .region-nav, .region-nav li, .region-nav li p, .social-nav .social-link, .inner-box .content-box .pink-round-button, .inner-box .content-box .pink-round-button svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,6 +8,14 @@ body, .region-nav, .region-nav li, .region-nav li p, .social-nav .social-link {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.inner-box .content-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 * {
@@ -44,7 +52,7 @@ body {
 .region-nav {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  top: 30%;
+  top: 33%;
   left: 0;
   width: 100%;
   height: 50px;
@@ -52,7 +60,7 @@ body {
 }
 
 .region-nav li {
-  padding: 0 20px;
+  padding: 0 25px;
   font-family: monospace;
   text-transform: uppercase;
   font-weight: 600;
@@ -116,8 +124,283 @@ body {
   fill: #bfbfbf;
 }
 
+.fat-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.inner-box {
+  width: 80%;
+  position: relative;
+}
+
+.inner-box .cover .big-title {
+  font-size: 200px;
+  line-height: 180px;
+}
+
+.inner-box .cover .play {
+  width: 65px;
+  height: 65px;
+}
+
+.inner-box .cover .play-icon {
+  width: 25px;
+  height: 25px;
+  -webkit-transform: translateX(3px);
+          transform: translateX(3px);
+}
+
+.inner-box .content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inner-box .content-box .pink-round-button {
+  background: #ff4242;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 11px 34px rgba(255, 66, 66, 0.3);
+          box-shadow: 0px 11px 34px rgba(255, 66, 66, 0.3);
+  cursor: pointer;
+}
+
+.inner-box .content-box .pink-round-button svg {
+  fill: white;
+}
+
+.inner-box .content-box .left {
+  width: 40%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 50px;
+}
+
+.inner-box .content-box h5.section-subtitle {
+  color: #b1b1b1;
+  font-size: 15px;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: sans-serif;
+  margin: 20px 0 40px;
+}
+
+.inner-box .content-box .right {
+  position: relative;
+  width: 60%;
+}
+
+.inner-box .content-box .full-line {
+  width: 275px;
+  height: 100%;
+  background: #eaeaea;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.inner-box .content-box .big-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 335px;
+  height: 505px;
+}
+
+.inner-box .content-box .big-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.inner-box .mountain-details .left {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-bottom: 70px;
+}
+
+.inner-box .mountain-details .left h1.big-title {
+  font-size: 60px;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+}
+
+.inner-box .mountain-details .left p.section-description {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: #c1c1c1;
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 40px;
+  padding-right: 30px;
+}
+
+.inner-box .mountain-details .left .arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+}
+
+.inner-box .mountain-details .left .arrows > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  opacity: 0.3;
+  cursor: pointer;
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+}
+
+.inner-box .mountain-details .left .arrows > *:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.inner-box .mountain-details .left .arrows svg {
+  width: 25px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inner-box .mountain-details .left .arrows .active {
+  opacity: 1;
+}
+
+.inner-box .mountain-details .left .arrow-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.inner-box .mountain-details .left .arrow-left svg {
+  -webkit-transform: rotate(90deg) translateY(10px);
+          transform: rotate(90deg) translateY(10px);
+}
+
+.inner-box .mountain-details .left .arrow-left span {
+  left: 0px;
+}
+
+.inner-box .mountain-details .left span.arrow-line {
+  width: 35px;
+  height: 2px;
+  background: black;
+  position: absolute;
+  top: calc(50% - 1px);
+}
+
+.inner-box .mountain-details .left .arrow-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.inner-box .mountain-details .left .arrow-right svg {
+  -webkit-transform: rotate(-90deg) translateY(10px);
+          transform: rotate(-90deg) translateY(10px);
+}
+
+.inner-box .mountain-details .big-image-inside {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.inner-box .mountain-details .big-image-inside .pink-round-button {
+  position: absolute;
+  right: -30px;
+  top: 55%;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.inner-box .mountain-details .big-image-inside .pink-round-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.inner-box .mountain-details.out .left .big-title {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+  opacity: 0;
+}
+
+.inner-box .mountain-details.out .left .section-description,
+.inner-box .mountain-details.out .left .section-subtitle {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 0;
+}
+
+.inner-box .mountain-details.out .left .arrow-right {
+  -webkit-transform: translateX(80px);
+          transform: translateX(80px);
+  opacity: 0;
+}
+
+.inner-box .mountain-details.out .left .arrow-left {
+  -webkit-transform: translateX(-80px);
+          transform: translateX(-80px);
+  opacity: 0;
+}
+
+.inner-box .mountain-details.out .right .full-line {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.inner-box .mountain-details.out .right .big-image {
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  opacity: 0;
+}
+
+.inner-box .mountain-details.out .right .big-image .pink-round-button {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 0;
+}
+
 .big-title {
   font-family: "Abril Fatface";
+  font-weight: 100;
 }
 
 .wrapper {
@@ -128,12 +411,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.wrapper .fat-content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 45px 45px -30px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 45px 45px -30px rgba(0, 0, 0, 0.3);
 }
 
 /** Top-bar start **/

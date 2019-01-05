@@ -1,0 +1,203 @@
+.fat-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.inner-box {
+  width: 80%;
+  position: relative;
+  .cover {
+    .big-title {
+      font-size: 200px;
+      line-height: 180px;
+    }
+    .play {
+      width: 65px;
+      height: 65px;
+    }
+    .play-icon {
+      width: 25px;
+      height: 25px;
+      transform: translateX(3px);
+    }
+  }
+  .content-box {
+    @extend %abs-full;
+    display: flex;
+    .pink-round-button {
+      background: $pink;
+      border-radius: 50%;
+      box-shadow: 0px 11px 34px $pink-30;
+      @extend %flex-center;
+      cursor: pointer;
+      svg {
+        @extend %flex-center;
+        fill: white;
+      }
+    }
+    .left {
+      width: 40%;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 50px;
+    }
+    h5.section-subtitle {
+      color: #b1b1b1;
+      font-size: 15px;
+      letter-spacing: 2px;
+      word-spacing: 5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      font-family: sans-serif;
+      margin: 20px 0 40px;
+    }
+    .right {
+      position: relative;
+      width: 60%;
+    }
+    .full-line {
+      width: 275px;
+      height: 100%;
+      background: #eaeaea;
+      transform-origin: top;
+    }
+    .big-image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 335px;
+      height: 505px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.inner-box .mountain-details {
+  .left {
+    justify-content: flex-end;
+    padding-bottom: 70px;
+    h1.big-title {
+      font-size: 60px;
+      white-space: nowrap;
+      letter-spacing: 2px;
+      word-spacing: 5px;
+    }
+    p.section-description {
+      font-family: "Roboto", sans-serif;
+      font-weight: 600;
+      color: rgb(193, 193, 193);
+      font-size: 12px;
+      line-height: 20px;
+      margin-bottom: 40px;
+      padding-right: 30px;
+    }
+    .arrows {
+      display: flex;
+      width: 100px;
+      & > * {
+        flex: 1;
+        position: relative;
+        opacity: 0.3;
+        cursor: pointer;
+        transition: 0.3s linear all;
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+      svg {
+        width: 25px;
+        height: 25px;
+        display: flex;
+      }
+      .active {
+        opacity: 1;
+      }
+    }
+    .arrow-left {
+      display: flex;
+      justify-content: flex-start;
+      svg {
+        transform: rotate(90deg) translateY(10px);
+      }
+      span {
+        left: 0px;
+      }
+    }
+    span.arrow-line {
+      width: 35px;
+      height: 2px;
+      background: black;
+      position: absolute;
+      top: calc(50% - 1px);
+    }
+    .arrow-right {
+      display: flex;
+      justify-content: flex-end;
+      svg {
+        transform: rotate(-90deg) translateY(10px);
+      }
+    }
+  }
+  .big-image-inside {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .pink-round-button {
+      position: absolute;
+      right: -$small-play-radius / 2;
+      top: 55%;
+      position: absolute;
+      width: $small-play-radius;
+      height: $small-play-radius;
+      svg {
+        width: $small-play-radius / 2 - 10px;
+        height: $small-play-radius / 2 - 10px;
+      }
+    }
+  }
+}
+
+.inner-box .mountain-details.out {
+  .left {
+    .big-title {
+      transform: translateY(10px);
+      filter: blur(50px);
+      opacity: 0;
+    }
+    .section-description,
+    .section-subtitle {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    .arrow-right {
+      transform: translateX(80px);
+      opacity: 0;
+    }
+    .arrow-left {
+      transform: translateX(-80px);
+      opacity: 0;
+    }
+  }
+  .right {
+    .full-line {
+      transform: scaleY(0);
+      filter: blur(5px);
+    }
+    .big-image {
+      transform: translateY(30%);
+      filter: blur(20px);
+      opacity: 0;
+      .pink-round-button {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+    }
+  }
+}
