@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background: #c0392b;
+  overflow: hidden;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.text {
+  width: 100vw;
+  height: 100vh;
+  @include flex-center();
+  color: white;
+  font-size: 100px;
+  letter-spacing: -2px;
+}
+
+.controller {
+  position: absolute;
+  @include flex-center();
+  bottom: 20px;
+  width: 255px;
+  left: calc(50% - 125px);
+  border: 1px solid black;
+  .controll-button {
+    padding: 5px 20px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s linear all;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      transform: scale(1.1);
+      color: white;
+    }
+    &:not(:last-child):after {
+      $height: 80%;
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: $height;
+      background: black;
+      top: (100% - $height) / 2;
+      right: 0;
+    }
+  }
+}
