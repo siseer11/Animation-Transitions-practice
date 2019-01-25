@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Economica";
+  list-style: none;
+}
+
+body {
+  background-color: #ebebeb;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.wrapper {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  cursor: pointer;
+}
+
+.top {
+  width: 380px;
+  height: 115px;
+  background: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0px 50px 0px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #cbcbcb;
+}
+
+.top #logo-svg {
+  width: 50px;
+  height: 50px;
+  fill: white;
+}
+
+.top .date {
+  -webkit-transform: translateX(-90px);
+          transform: translateX(-90px);
+  opacity: 0;
+}
+
+.top .logo {
+  -webkit-transform: translateX(115px);
+          transform: translateX(115px);
+}
+
+.middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  width: 380px;
+  background: radial-gradient(circle at 0 100%, rgba(154, 0, 0, 0) 15px, white 16px), radial-gradient(circle at 100% 100%, rgba(154, 0, 0, 0) 15px, white 16px), radial-gradient(circle at 100% 0, white 15px, white 16px), radial-gradient(circle at 0 0, white 14px, white 15px);
+  background-position: bottom left, bottom right, top right, top left;
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  padding: 20px 50px 25px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 225px;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.middle > * {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+}
+
+.middle .head,
+.middle .item,
+.middle .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.middle .head {
+  color: #cbcbcb;
+}
+
+.middle .line {
+  background-color: #cbcbcb;
+  width: 100%;
+  height: 1px;
+  margin: 5px 0 8px 0;
+}
+
+.middle .items {
+  color: #777777;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.middle .total {
+  color: #777777;
+}
+
+.middle .item {
+  margin: 8px 0;
+}
+
+.middle .item .name {
+  letter-spacing: 1px;
+}
+
+.middle p.total-price {
+  font-size: 30px;
+}
+
+.middle p.total-price span {
+  font-size: 20px;
+}
+
+.bottom {
+  opacity: 0;
+  width: 380px;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  padding: 5px 50px 5px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  background: radial-gradient(circle at 0 100%, white 15px, white 16px), radial-gradient(circle at 100% 100%, white 15px, white 16px), radial-gradient(circle at 100% 0, rgba(0, 0, 0, 0) 15px, white 16px), radial-gradient(circle at 0 0, rgba(0, 0, 0, 0) 15px, white 16px);
+  background-position: bottom left, bottom right, top right, top left;
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bottom:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 90%;
+  height: 1px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(60%, #777777), color-stop(60%, transparent));
+  background: linear-gradient(to left, #777777 60%, transparent 60%);
+  background-size: 15px;
+}
+
+.bottom svg {
+  -webkit-transform: scaleY(0.8);
+          transform: scaleY(0.8);
+}
+
+.receipt-body {
+  height: 0;
+  overflow: hidden;
+}
+
+/* height: 225px
+
+height: 90px
+
+280px inner elements */
+/*# sourceMappingURL=index.css.map */
